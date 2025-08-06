@@ -183,19 +183,18 @@ class Wdevs_Filter_Order_History {
 			$this->loader->add_action( 'woocommerce_after_settings_wdevs_foh', $plugin_woocommerce, 'render_footer_info' );
 			$this->loader->add_action( 'wp_ajax_' . Wdevs_Filter_Order_History_Woocommerce::AJAX_ACTION_UPDATE_ORDER, $plugin_woocommerce, Wdevs_Filter_Order_History_Woocommerce::AJAX_ACTION_UPDATE_ORDER . '_action' );
 		} else {
-			if ( Wdevs_Filter_Order_History_Filter_Manager::is_enabled() ) {
-				// Frontend hooks for orders table columns
-				$this->loader->add_filter( 'woocommerce_account_orders_columns', $plugin_woocommerce, 'add_account_orders_columns', 10, 1 );
-				$this->loader->add_action( 'init', $plugin_woocommerce, 'register_column_hooks' );
+			// Frontend hooks for orders table columns
+			$this->loader->add_filter( 'woocommerce_account_orders_columns', $plugin_woocommerce, 'add_account_orders_columns', 10, 1 );
+			$this->loader->add_action( 'init', $plugin_woocommerce, 'register_column_hooks' );
 
-				// Frontend hooks for order filtering
-				$this->loader->add_action( 'woocommerce_before_account_orders', $plugin_woocommerce, 'render_order_filters' );
-				$this->loader->add_filter( 'woocommerce_my_account_my_orders_query', $plugin_woocommerce, 'filter_my_account_orders_query', 10, 1 );
+			// Frontend hooks for order filtering
+			$this->loader->add_action( 'woocommerce_before_account_orders', $plugin_woocommerce, 'render_order_filters' );
+			$this->loader->add_filter( 'woocommerce_my_account_my_orders_query', $plugin_woocommerce, 'filter_my_account_orders_query', 10, 1 );
 
-				// Hooks to hide default "no orders" message when filtering is active
-				$this->loader->add_action( 'woocommerce_before_account_orders', $plugin_woocommerce, 'maybe_hide_no_orders_message_start', PHP_INT_MAX, 1 );
-				$this->loader->add_action( 'woocommerce_after_account_orders', $plugin_woocommerce, 'maybe_hide_no_orders_message_end', PHP_INT_MIN, 1 );
-			}
+			// Hooks to hide default "no orders" message when filtering is active
+			$this->loader->add_action( 'woocommerce_before_account_orders', $plugin_woocommerce, 'maybe_hide_no_orders_message_start', PHP_INT_MAX, 1 );
+			$this->loader->add_action( 'woocommerce_after_account_orders', $plugin_woocommerce, 'maybe_hide_no_orders_message_end', PHP_INT_MIN, 1 );
+
 		}
 	}
 

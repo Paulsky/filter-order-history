@@ -288,6 +288,10 @@ class Wdevs_Filter_Order_History_Woocommerce {
 	 * @since 1.0.0
 	 */
 	public function add_account_orders_columns( $columns ) {
+		if (! Wdevs_Filter_Order_History_Filter_Manager::is_enabled() ) {
+            return $columns;
+		}
+
 		$selected_columns_data = $this->selected_account_orders_columns();
 		$new_columns = array();
 
@@ -427,6 +431,10 @@ class Wdevs_Filter_Order_History_Woocommerce {
 
 			if ( ! isset( $existing_columns[ $column_id ] ) ) {
 				add_action( 'woocommerce_my_account_my_orders_column_' . $column_id, function ( $order ) use ( $column_id ) {
+					if (! Wdevs_Filter_Order_History_Filter_Manager::is_enabled() ) {
+						return;
+					}
+
 					$this->render_custom_column_content( $order, $column_id );
 				}, 10, 1 );
 			}
@@ -516,6 +524,10 @@ class Wdevs_Filter_Order_History_Woocommerce {
 	 * @since 1.0.0
 	 */
 	public function render_order_filters( $has_orders ) {
+		if (! Wdevs_Filter_Order_History_Filter_Manager::is_enabled() ) {
+			return;
+		}
+
 		return $this->filter_manager->render_order_filters( $has_orders );
 	}
 
@@ -719,6 +731,10 @@ class Wdevs_Filter_Order_History_Woocommerce {
 	 * @since 1.0.0
 	 */
 	public function filter_my_account_orders_query( $query_args ) {
+		if (! Wdevs_Filter_Order_History_Filter_Manager::is_enabled() ) {
+			return $query_args;
+		}
+
 		return $this->filter_manager->filter_my_account_orders_query( $query_args );
 	}
 
@@ -730,6 +746,10 @@ class Wdevs_Filter_Order_History_Woocommerce {
 	 * @since 1.0.0
 	 */
 	public function maybe_hide_no_orders_message_start( $has_orders ) {
+		if (! Wdevs_Filter_Order_History_Filter_Manager::is_enabled() ) {
+			return;
+		}
+
 		// Only hide the message if there are no orders but filtering is active
 		if ( ! $has_orders && $this->filter_manager->is_filtering() ) {
 			echo '<div class="wdevs-foh-hide-no-orders" style="display: none;">';
@@ -744,6 +764,10 @@ class Wdevs_Filter_Order_History_Woocommerce {
 	 * @since 1.0.0
 	 */
 	public function maybe_hide_no_orders_message_end( $has_orders ) {
+		if (! Wdevs_Filter_Order_History_Filter_Manager::is_enabled() ) {
+			return;
+		}
+
 		// Only close the wrapper if there are no orders but filtering is active
 		if ( ! $has_orders && $this->filter_manager->is_filtering() ) {
 			echo '</div>';

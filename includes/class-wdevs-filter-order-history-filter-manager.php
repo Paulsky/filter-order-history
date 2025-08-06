@@ -47,8 +47,8 @@ class Wdevs_Filter_Order_History_Filter_Manager {
 	 */
 	public static function is_enabled() {
 		$enabled = true;
-		
-		return apply_filters( 'wdevs_foh_is_enabled', $enabled );
+
+		return apply_filters( 'wdevs_foh_frontend_is_enabled', $enabled );
 	}
 
 	/**

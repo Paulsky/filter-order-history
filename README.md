@@ -2,8 +2,6 @@
 
 Enhances the WooCommerce order history page by adding advanced filtering capabilities and customizable column displays. This enables customers to easily search and filter their order history using multiple criteria.
 
-<img src="https://via.placeholder.com/250x150/0073aa/ffffff?text=OrderFinder+Demo" width="250" alt="OrderFinder demo" style="max-width: 250px !important; height: auto !important;" />
-
 For more WordPress plugins, check out our products at [Wijnberg Developments](https://products.wijnberg.dev).
 
 ## Built with

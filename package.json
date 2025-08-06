@@ -1,0 +1,24 @@
+{
+  "name": "filter-order-history-for-woocommerce",
+  "version": "1.0.0",
+  "description": "Let customers filter and search their order history with advanced options and customizable columns.",
+  "author": "Wijnberg Developments <contact@wijnberg.dev>",
+  "license": "GPL-2.0-or-later",
+  "scripts": {
+    "format": "wp-scripts format",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "deploy": "npm run format && npm run plugin-zip"
+  },
+  "files": [
+    "admin",
+    "includes",
+    "languages",
+    "public",
+    "wdevs-filter-order-history.php",
+    "LICENSE.txt",
+    "README.txt"
+  ],
+  "devDependencies": {
+    "@wordpress/scripts": "^30.20.0"
+  }
+}

@@ -1,0 +1,262 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OrderFinder - Filter Order History for WooCommerce\n"
+"POT-Creation-Date: 2025-08-06 09:22+0200\n"
+"PO-Revision-Date: 2025-08-06 09:21+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: wdevs-filter-order-history.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
+
+#: admin/class-wdevs-filter-order-history-admin.php:84
+#: includes/class-wdevs-filter-order-history-woocommerce.php:276
+msgid "Settings"
+msgstr ""
+
+#: admin/partials/section-wdevs-filter-order-history-column-order.php:22
+#: includes/class-wdevs-filter-order-history-woocommerce.php:277
+msgid "Columns ordering"
+msgstr ""
+
+#: admin/partials/section-wdevs-filter-order-history-column-order.php:23
+msgid ""
+"Drag and drop to reorder columns. Only selected columns from the main "
+"settings will be shown in the customer order table."
+msgstr ""
+
+#: admin/partials/section-wdevs-filter-order-history-column-order.php:28
+msgid ""
+"Drag and drop to re-order your custom zones. This is the order in which they "
+"will be matched against the customer address."
+msgstr ""
+
+#: admin/partials/section-wdevs-filter-order-history-column-order.php:29
+msgid "Column name"
+msgstr ""
+
+#: includes/class-wdevs-filter-order-history-activator.php:36
+msgid ""
+"This plugin requires WooCommerce. Please install and activate WooCommerce "
+"before activating this plugin."
+msgstr ""
+
+#: includes/class-wdevs-filter-order-history-woocommerce.php:123
+msgid "Filter Order History"
+msgstr ""
+
+#: includes/class-wdevs-filter-order-history-woocommerce.php:137
+msgid "Order filters settings"
+msgstr ""
+
+#: includes/class-wdevs-filter-order-history-woocommerce.php:139
+msgid "Select which columns customers can use to filter their orders."
+msgstr ""
+
+#: includes/class-wdevs-filter-order-history-woocommerce.php:143
+msgid "Columns"
+msgstr ""
+
+#: includes/class-wdevs-filter-order-history-woocommerce.php:145
+msgid "Select which order fields customers can use to filter their orders."
+msgstr ""
+
+#. translators: %s: Link to author site.
+#: includes/class-wdevs-filter-order-history-woocommerce.php:195
+#, php-format
+msgid ""
+" OrderFinder - Filter Order History for WooCommerce is developed by %s. Your "
+"trusted WordPress & WooCommerce plugin partner from the Netherlands."
+msgstr ""
+
+#: includes/class-wdevs-filter-order-history-woocommerce.php:250
+msgid "Documentation"
+msgstr ""
+
+#: includes/class-wdevs-filter-order-history-woocommerce.php:484
+msgid "Column order updated."
+msgstr ""
+
+#. translators: %s: Field label
+#: includes/class-wdevs-filter-order-history-woocommerce.php:550
+#, php-format
+msgid "Search %s..."
+msgstr ""
+
+#: includes/class-wdevs-filter-order-history-woocommerce.php:750
+msgid "No results for the selected filters."
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:35
+msgid "Order Status"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:36
+msgid "Order Number"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:39
+msgid "Currency"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:41
+msgid "Date created"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:42
+msgid "Date modified"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:43
+msgid "Date completed"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:44
+msgid "Date paid"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:47
+msgid "Billing First Name"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:48
+msgid "Billing Last Name"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:49
+msgid "Billing Company"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:50
+msgid "Billing Address 1"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:51
+msgid "Billing Address 2"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:52
+msgid "Billing City"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:53
+msgid "Billing State"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:54
+msgid "Billing Postcode"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:55
+msgid "Billing Country"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:56
+msgid "Billing Email"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:57
+msgid "Billing Phone"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:60
+msgid "Shipping First Name"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:61
+msgid "Shipping Last Name"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:62
+msgid "Shipping Company"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:63
+msgid "Shipping Address 1"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:64
+msgid "Shipping Address 2"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:65
+msgid "Shipping City"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:66
+msgid "Shipping State"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:67
+msgid "Shipping Postcode"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:68
+msgid "Shipping Country"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:69
+msgid "Shipping Phone"
+msgstr ""
+
+#: includes/trait-wdevs-filter-order-history-helper.php:72
+msgid "Payment Method"
+msgstr ""
+
+#: public/partials/section-wdevs-filter-order-history-order-filters.php:49
+msgid "All"
+msgstr ""
+
+#: public/partials/section-wdevs-filter-order-history-order-filters.php:64
+msgid "From"
+msgstr ""
+
+#: public/partials/section-wdevs-filter-order-history-order-filters.php:74
+msgid "To"
+msgstr ""
+
+#: public/partials/section-wdevs-filter-order-history-order-filters.php:85
+msgid "Filter orders"
+msgstr ""
+
+#: public/partials/section-wdevs-filter-order-history-order-filters.php:90
+msgid "Clear filters"
+msgstr ""
+
+#: public/partials/section-wdevs-filter-order-history-order-filters.php:98
+msgid "Active filters:"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "OrderFinder - Filter Order History for WooCommerce"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://products.wijnberg.dev"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Filter and search your WooCommerce order history with customizable columns "
+"and advanced filtering options."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Wijnberg Developments"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://products.wijnberg.dev/"
+msgstr ""

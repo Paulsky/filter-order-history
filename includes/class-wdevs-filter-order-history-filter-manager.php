@@ -242,6 +242,10 @@ class Wdevs_Filter_Order_History_Filter_Manager {
 		$filters = array();
 
 		foreach ( $_GET as $key => $value ) {
+			if($key === self::FILTER_NONCE_NAME){
+				continue;
+			}
+
 			if ( strpos( $key, 'wdevs_foh_filter_' ) === 0 ) {
 				$filter_key = str_replace( 'wdevs_foh_filter_', '', $key );
 				

@@ -85,7 +85,7 @@ if ( empty( $filter_fields ) || ! is_array( $filter_fields ) ) {
 				<?php esc_html_e('Filter orders', 'filter-order-history-for-woocommerce'); ?>
             </button>
 
-			<?php if (!empty(array_filter($current_filters))) : ?>
+			<?php if ($has_active_filters) : ?>
                 <a href="<?php echo esc_url( wc_get_account_endpoint_url( 'orders' ) ); ?>" class="button">
 					<?php esc_html_e('Clear filters', 'filter-order-history-for-woocommerce'); ?>
                 </a>
@@ -93,7 +93,7 @@ if ( empty( $filter_fields ) || ! is_array( $filter_fields ) ) {
         </div>
     </form>
 
-	<?php if ( ! empty( array_filter( $current_filters ) ) ) : ?>
+	<?php if ( $has_active_filters ) : ?>
         <div class="wdevs-foh-active-filters">
             <div class="wdevs-foh-active-filters-title"><?php esc_html_e( 'Active filters:', 'filter-order-history-for-woocommerce' ); ?></div>
             <ul>

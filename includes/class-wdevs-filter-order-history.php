@@ -35,7 +35,7 @@ class Wdevs_Filter_Order_History {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Wdevs_Filter_Order_History_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      Wdevs_Filter_Order_History_Loader $loader Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -44,7 +44,7 @@ class Wdevs_Filter_Order_History {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      string    $plugin_name    The string used to uniquely identify this plugin.
+	 * @var      string $plugin_name The string used to uniquely identify this plugin.
 	 */
 	protected $plugin_name;
 
@@ -53,7 +53,7 @@ class Wdevs_Filter_Order_History {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      string    $version    The current version of the plugin.
+	 * @var      string $version The current version of the plugin.
 	 */
 	protected $version;
 
@@ -180,20 +180,22 @@ class Wdevs_Filter_Order_History {
 		if ( is_admin() ) {
 			$this->loader->add_filter( 'woocommerce_settings_tabs_array', $plugin_woocommerce, 'add_settings_tab', 50 );
 			$this->loader->add_action( 'woocommerce_settings_tabs_wdevs_foh', $plugin_woocommerce, 'settings_tab' );
-			$this->loader->add_action('woocommerce_after_settings_wdevs_foh', $plugin_woocommerce, 'render_footer_info');
-			$this->loader->add_action( 'wp_ajax_'.Wdevs_Filter_Order_History_Woocommerce::AJAX_ACTION_UPDATE_ORDER, $plugin_woocommerce, Wdevs_Filter_Order_History_Woocommerce::AJAX_ACTION_UPDATE_ORDER . '_action');
+			$this->loader->add_action( 'woocommerce_after_settings_wdevs_foh', $plugin_woocommerce, 'render_footer_info' );
+			$this->loader->add_action( 'wp_ajax_' . Wdevs_Filter_Order_History_Woocommerce::AJAX_ACTION_UPDATE_ORDER, $plugin_woocommerce, Wdevs_Filter_Order_History_Woocommerce::AJAX_ACTION_UPDATE_ORDER . '_action' );
 		} else {
-			// Frontend hooks for orders table columns
-			$this->loader->add_filter( 'woocommerce_account_orders_columns', $plugin_woocommerce, 'add_account_orders_columns', 10, 1 );
-			$this->loader->add_action( 'init', $plugin_woocommerce, 'register_column_hooks' );
-			
-			// Frontend hooks for order filtering
-			$this->loader->add_action( 'woocommerce_before_account_orders', $plugin_woocommerce, 'render_order_filters' );
-			$this->loader->add_filter( 'woocommerce_my_account_my_orders_query', $plugin_woocommerce, 'filter_my_account_orders_query', 10, 1 );
-			
-			// Hooks to hide default "no orders" message when filtering is active
-			$this->loader->add_action( 'woocommerce_before_account_orders', $plugin_woocommerce, 'maybe_hide_no_orders_message_start', PHP_INT_MAX,1  );
-			$this->loader->add_action( 'woocommerce_after_account_orders', $plugin_woocommerce, 'maybe_hide_no_orders_message_end', PHP_INT_MIN,1  );
+			if ( Wdevs_Filter_Order_History_Filter_Manager::is_enabled() ) {
+				// Frontend hooks for orders table columns
+				$this->loader->add_filter( 'woocommerce_account_orders_columns', $plugin_woocommerce, 'add_account_orders_columns', 10, 1 );
+				$this->loader->add_action( 'init', $plugin_woocommerce, 'register_column_hooks' );
+
+				// Frontend hooks for order filtering
+				$this->loader->add_action( 'woocommerce_before_account_orders', $plugin_woocommerce, 'render_order_filters' );
+				$this->loader->add_filter( 'woocommerce_my_account_my_orders_query', $plugin_woocommerce, 'filter_my_account_orders_query', 10, 1 );
+
+				// Hooks to hide default "no orders" message when filtering is active
+				$this->loader->add_action( 'woocommerce_before_account_orders', $plugin_woocommerce, 'maybe_hide_no_orders_message_start', PHP_INT_MAX, 1 );
+				$this->loader->add_action( 'woocommerce_after_account_orders', $plugin_woocommerce, 'maybe_hide_no_orders_message_end', PHP_INT_MIN, 1 );
+			}
 		}
 	}
 
@@ -210,8 +212,8 @@ class Wdevs_Filter_Order_History {
 	 * The name of the plugin used to uniquely identify it within the context of
 	 * WordPress and to define internationalization functionality.
 	 *
-	 * @since     1.0.0
 	 * @return    string    The name of the plugin.
+	 * @since     1.0.0
 	 */
 	public function get_plugin_name() {
 		return $this->plugin_name;
@@ -220,8 +222,8 @@ class Wdevs_Filter_Order_History {
 	/**
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
-	 * @since     1.0.0
 	 * @return    Wdevs_Filter_Order_History_Loader    Orchestrates the hooks of the plugin.
+	 * @since     1.0.0
 	 */
 	public function get_loader() {
 		return $this->loader;
@@ -230,8 +232,8 @@ class Wdevs_Filter_Order_History {
 	/**
 	 * Retrieve the version number of the plugin.
 	 *
-	 * @since     1.0.0
 	 * @return    string    The version number of the plugin.
+	 * @since     1.0.0
 	 */
 	public function get_version() {
 		return $this->version;

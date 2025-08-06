@@ -40,6 +40,18 @@ class Wdevs_Filter_Order_History_Filter_Manager {
 	use Wdevs_Filter_Order_History_Helper_Trait;
 
 	/**
+	 * Check if the filter functionality is enabled.
+	 *
+	 * @return bool True if enabled, false otherwise.
+	 * @since 1.0.0
+	 */
+	public static function is_enabled() {
+		$enabled = true;
+		
+		return apply_filters( 'wdevs_foh_is_enabled', $enabled );
+	}
+
+	/**
 	 * Render order filters form before account orders table.
 	 *
 	 * @param bool $has_orders Whether the customer has orders.
@@ -58,9 +70,10 @@ class Wdevs_Filter_Order_History_Filter_Manager {
 			return;
 		}
 
-		$filter_fields   = $this->get_filter_fields_config();
-		$current_filters = $this->get_active_filter_values();
-		$hidden_fields   = $this->get_hidden_fields();
+		$filter_fields       = $this->get_filter_fields_config();
+		$current_filters     = $this->get_active_filter_values();
+		$hidden_fields       = $this->get_hidden_fields();
+		$has_active_filters  = $this->has_active_filter_values();
 
 		// Include the filter form template
 		include plugin_dir_path( dirname( __FILE__ ) ) . 'public/partials/section-wdevs-filter-order-history-order-filters.php';
@@ -296,12 +309,20 @@ class Wdevs_Filter_Order_History_Filter_Manager {
 	 * @since 1.0.0
 	 */
 	public function is_filtering() {
-		// Check for filter nonce presence (indicates form was submitted)
 		if ( ! empty( $_GET[ self::FILTER_NONCE_NAME ] ) ) {
 			return true;
 		}
 
-		// Check for any filter parameters with non-empty values
+		return $this->has_active_filter_values();
+	}
+
+	/**
+	 * Check if there are active filter values (ignoring nonce).
+	 *
+	 * @return bool True if there are meaningful filter values, false otherwise.
+	 * @since 1.0.0
+	 */
+	private function has_active_filter_values() {
 		$filters = $this->get_active_filter_values();
 
 		if ( empty( $filters ) ) {

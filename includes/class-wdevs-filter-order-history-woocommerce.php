@@ -199,12 +199,6 @@ class Wdevs_Filter_Order_History_Woocommerce {
 		echo '<span style="padding: 0 30px; background: #f0f0f1; display: block;">' . wp_kses_post( $text ) . '</span>';
 	}
 
-
-
-
-
-
-
 	/**
 	 * Handle sections for the settings tab.
 	 *
@@ -468,11 +462,16 @@ class Wdevs_Filter_Order_History_Woocommerce {
 			wp_send_json_error( 'invalid_data' );
 			wp_die();
 		}
+        
+		if ( count( $column_order_data ) > 50 ) { // Prevent too large arrays
+			wp_send_json_error( 'too_many_items' );
+			wp_die();
+		}
 
 		$new_order = array();
 
 		foreach ( $column_order_data as $item ) {
-			if ( ! isset( $item['column_id'] ) || ! isset( $item['order'] ) ) {
+			if ( ! is_array( $item ) || ! isset( $item['column_id'] ) || ! isset( $item['order'] ) ) {
 				wp_send_json_error( 'invalid_item_structure' );
 				wp_die();
 			}

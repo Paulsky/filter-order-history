@@ -1,6 +1,6 @@
 # OrderFinder - Filter Order History for WooCommerce
 
-Enhances the WooCommerce order history page by adding advanced filtering capabilities and customizable column displays. This enables customers to easily search and filter their order history using multiple criteria.
+Enhances the WooCommerce order history page by adding advanced filtering capabilities and customizable column displays. This enables customers to easily search and filter their order history using multiple criteria while giving store owners full control over which information is displayed.
 
 For more WordPress plugins, check out our products at [Wijnberg Developments](https://products.wijnberg.dev).
 
@@ -12,6 +12,32 @@ For more WordPress plugins, check out our products at [Wijnberg Developments](ht
 ## Requirements
 
 - WooCommerce plugin installed and activated
+- WordPress 6.0 or higher  
+- PHP 7.4 or higher
+- WooCommerce 7.0.0 or higher
+
+## Key Features
+
+### For Store Administrators
+- **Column Management**: Select which order fields to display as columns from 25+ available options
+- **Drag-and-Drop Ordering**: Intuitive interface to reorder columns in the orders table
+- **Flexible Configuration**: Choose exactly what information customers can filter by
+- **HPOS Compatibility**: Full support for WooCommerce High-Performance Order Storage
+
+### For Customers  
+- **Advanced Filtering**: Filter orders by status, dates, billing/shipping information, and payment method
+- **Date Range Selection**: Filter by creation, modification, completion, and payment dates
+- **Active Filter Display**: Clear indication of applied filters with easy removal
+- **Intuitive Interface**: Dropdown selects and date pickers for user-friendly filtering
+
+## Available Order Fields
+
+The plugin provides access to comprehensive order information:
+
+- **Order information** such as status, order number, currency, and key dates (created, modified, completed, paid)
+- **Billing information** such as customer name, company, contact details, and complete address information
+- **Shipping information** such as recipient name, company, phone number, and delivery address
+- **Payment information** including payment method details
 
 ## Installation
 
@@ -31,24 +57,36 @@ These instructions will guide you through the installation and basic setup of th
 
 ### Configuration
 
-Once activated, OrderFinder requires no mandatory configuration to start working. By default, it will automatically add filtering functionality to your WooCommerce order history page.
+Once activated, you can customize the plugin through the admin interface:
 
-To customize the filtering settings:
-1. Go to the Filter Order History settings page located under the 'WooCommerce' menu in the WordPress admin area.
-2. Select which order fields customers can filter by from the available options.
-3. Use the Columns Ordering tab to customize the display order of table columns.
-4. Save your changes.
+#### Column Selection
+1. Go to `WooCommerce` > `Settings` > `Filter Order History`
+2. Select which order fields customers can use to filter their orders
+3. Choose from 25+ available order fields including billing, shipping, and order information
+4. Save your changes
+
+#### Column Ordering  
+1. Navigate to `WooCommerce` > `Settings` > `Filter Order History` > `Columns Ordering`
+2. Use the drag-and-drop interface to reorder table columns as they will appear in the customer's order history
+3. Only selected columns from the main settings will be displayed
+4. Changes take effect immediately on the frontend
 
 ### Usage
 
-After installation and configuration, navigate to the My Account > Orders page on your website. You should see the order filtering form displayed above the orders table, allowing customers to filter their order history using the selected criteria.
+After configuration, navigate to the My Account > Orders page on your website. You will see:
+
+- **Filter Form**: Appears above the orders table with selected filter options
+- **Dropdown Filters**: For categorical fields like order status and payment method
+- **Date Range Filters**: Date pickers for filtering by various order dates  
+- **Active Filters**: Display of currently applied filters with clear removal options
+- **Custom Columns**: Additional order information columns based on your configuration
 
 ## Language support
 
 Currently supported languages:
 - English
 
-If you would like to add support for a new language or improve existing translations, please let us know by opening an issue or contacting us through our website. You are also welcome to submit a pull request of course!
+If you would like to add support for a new language or improve existing translations, please let us know by opening an issue or contacting us through our website.
 
 ## Contributing
 

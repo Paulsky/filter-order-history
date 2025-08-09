@@ -39,7 +39,7 @@ if ( empty( $filter_fields ) || ! is_array( $filter_fields ) ) {
 				$counter++;
 				$row_class = ($counter % 2 === 1) ? 'form-row-first' : 'form-row-last';
 				?>
-                <div class="form-row <?php echo $row_class; ?>">
+                <div class="form-row <?php echo esc_attr( $row_class ); ?>">
                     <label for="wdevs_foh_filter_<?php echo esc_attr($field_key); ?>">
 						<?php echo esc_html($field_config['label']); ?>
                     </label>

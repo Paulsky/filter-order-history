@@ -95,7 +95,12 @@ class Wdevs_Filter_Order_History_Filter_Manager {
 		);
 
 		// Preserve existing URL parameters (like pagination)
+		$allowed_params = array( 'paged', 'order', 'orderby' );
+		
 		foreach ( $_GET as $key => $value ) {
+			// Sanitize key immediately
+			$key = sanitize_key( $key );
+			
 			// Skip our own filter parameters and nonce
 			if ( strpos( $key, 'wdevs_foh_filter_' ) === 0 || 
 				 $key === 'orders-search' || 
@@ -103,9 +108,14 @@ class Wdevs_Filter_Order_History_Filter_Manager {
 				continue;
 			}
 
+			// Only allow whitelisted parameters
+			if ( ! in_array( $key, $allowed_params, true ) ) {
+				continue;
+			}
+
 			$hidden_fields[] = array(
-				'name'  => sanitize_key( $key ),
-				'value' => sanitize_text_field( $value )
+				'name'  => $key,
+				'value' => sanitize_text_field( wp_unslash( $value ) )
 			);
 		}
 
@@ -242,6 +252,9 @@ class Wdevs_Filter_Order_History_Filter_Manager {
 		$filters = array();
 
 		foreach ( $_GET as $key => $value ) {
+			// Sanitize key immediately
+			$key = sanitize_key( $key );
+			
 			if($key === self::FILTER_NONCE_NAME){
 				continue;
 			}
@@ -249,11 +262,26 @@ class Wdevs_Filter_Order_History_Filter_Manager {
 			if ( strpos( $key, 'wdevs_foh_filter_' ) === 0 ) {
 				$filter_key = str_replace( 'wdevs_foh_filter_', '', $key );
 				
+				// Validate filter key against allowed fields
+				$allowed_fields = $this->get_selected_columns();
+				$date_fields = $this->get_date_fields();
+				
+				// Build allowed filter keys (includes date range suffixes)
+				$allowed_filter_keys = $allowed_fields;
+				foreach ( $date_fields as $date_field ) {
+					$allowed_filter_keys[] = $date_field . '_from';
+					$allowed_filter_keys[] = $date_field . '_to';
+				}
+				
+				if ( ! in_array( $filter_key, $allowed_filter_keys, true ) ) {
+					continue;
+				}
+				
 				// Sanitize the value based on context
 				if ( is_array( $value ) ) {
-					$filters[ $filter_key ] = array_map( 'sanitize_text_field', $value );
+					$filters[ $filter_key ] = array_map( 'sanitize_text_field', wp_unslash( $value ) );
 				} else {
-					$filters[ $filter_key ] = sanitize_text_field( $value );
+					$filters[ $filter_key ] = sanitize_text_field( wp_unslash( $value ) );
 				}
 			}
 		}
@@ -396,7 +424,7 @@ class Wdevs_Filter_Order_History_Filter_Manager {
 				continue;
 			}
 
-			// Handle other filters (HPOS compatible) with field validation
+			// Handle other filters with field validation
 			$allowed_fields = $this->get_selected_columns();
 			if ( in_array( $filter_key, $allowed_fields, true ) ) {
 				$query_args[ $filter_key ] = $filter_value;
@@ -424,4 +452,5 @@ class Wdevs_Filter_Order_History_Filter_Manager {
 
 		return $date_fields;
 	}
+
 }

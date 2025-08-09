@@ -12,47 +12,59 @@ Let customers filter and search their order history with advanced options and cu
 
 == Description ==
 
-OrderFinder - Filter Order History for WooCommerce is a powerful plugin that revolutionizes how your customers interact with their order history. Transform the basic WooCommerce "My Account > Orders" page into a sophisticated order management system with advanced filtering capabilities and customizable column displays.
+OrderFinder - Filter Order History for WooCommerce enhances your WooCommerce store by allowing customers to filter and search their order history using multiple criteria. This plugin adds customizable column displays and an intuitive filtering interface to the standard WooCommerce "My Account > Orders" page.
 
 === Key features ===
 
-* Advanced order filtering with 25+ filterable fields
-* Customizable column display and drag-and-drop ordering
-* Enhanced user interface with dropdown selects and date pickers
-* Active filter display with clear options
-* HPOS compatibility
-* Security-first implementation
-
-Perfect for stores with high order volumes, B2B businesses, and any WooCommerce site that wants to enhance customer experience. Your customers can quickly find specific orders using multiple criteria, making order management effortless and intuitive.
+* Customizable column selection and ordering
+* Advanced order filtering with multiple field support
+* Date range filtering with intuitive interface
+* Active filter display with clear removal options
+* Drag-and-drop admin interface for column management
+* HPOS (High-Performance Order Storage) compatibility
 
 For more information about this plugin, please visit the [plugin page](https://products.wijnberg.dev/).
 
 === Requirements ===
 
-- WooCommerce plugin installed and activated
+* WooCommerce plugin installed and activated
 
 === Filterable order fields ===
 
-The plugin supports filtering by these order fields:
+The plugin supports filtering by comprehensive order information:
 
-**Core Order Information:**
-- Order Status, Order Number, Currency
-- Date Created, Date Modified, Date Completed, Date Paid
+* **Order information** such as status, order number, currency, and key dates (created, modified, completed, paid)
+* **Billing information** such as customer name, company, contact details, and complete address information
+* **Shipping information** such as recipient name, company, phone number, and delivery address
+* **Payment information** including payment method details
 
-**Billing Information:**
-- First Name, Last Name, Company Name, Email, Phone
-- Address Line 1 & 2, City, State/Province, Postal Code, Country
+=== Configuration ===
 
-**Shipping Information:**
-- First Name, Last Name, Company Name, Phone
-- Address Line 1 & 2, City, State/Province, Postal Code, Country
+Configure the plugin settings below for proper functionality.
 
-**Payment Information:**
-- Payment Method
+= Plugin settings =
+
+Configure these plugin-specific settings:
+
+1. **Column Selection**
+   - Go to: *WooCommerce > Settings > Filter Order History*
+   - Select which order fields customers can use to filter their orders
+   - Choose from 25+ available order fields
+
+2. **Column Ordering**
+   - Go to: *WooCommerce > Settings > Filter Order History > Columns Ordering*
+   - Drag and drop columns to reorder them as they will appear in the customer's order history table
+   - Only selected columns from the main settings will be shown
 
 === Usage ===
 
-After installation and activation, OrderFinder will automatically add filtering functionality to your WooCommerce order history page. You can customize the settings in WooCommerce > Settings > Filter Order History.
+After installation and configuration, customers will see enhanced functionality on the **My Account > Orders** page:
+
+1. **Filtering Interface**: A filtering form appears above the orders table
+2. **Dropdown Filters**: Easy selection for categorical fields like status and payment method
+3. **Date Range Filters**: Date pickers for filtering by order dates
+4. **Active Filters**: Clear display of applied filters with removal options
+5. **Custom Columns**: Additional order information columns as configured by admin
 
 == Installation ==
 
@@ -66,9 +78,29 @@ After installation and activation, OrderFinder will automatically add filtering 
 
 Yes, the plugin uses WooCommerce's standard styling and hooks, making it compatible with most themes that properly support WooCommerce.
 
+= Does this work with HPOS (High-Performance Order Storage)? =
+
+Yes, OrderFinder is fully compatible with WooCommerce's High-Performance Order Storage feature.
+
+= Can I customize which fields customers can filter by? =
+
+Absolutely! Go to WooCommerce > Settings > Filter Order History to select which order fields should be available for filtering.
+
+= Can I change the order of columns in the orders table? =
+
+Yes, use the drag-and-drop interface in WooCommerce > Settings > Filter Order History > Columns Ordering to reorder columns.
+
+= Does this work with large order volumes? =
+
+Yes, the plugin uses efficient WooCommerce query methods and supports pagination for performance.
+
+= Can customers see orders from other customers? =
+
+No, the plugin maintains WooCommerce's security model. Customers can only filter and view their own orders.
+
 == Screenshots ==
 
-
+1. Enhanced order history page with filtering interface and custom columns
 
 == Changelog ==
 
@@ -77,5 +109,6 @@ Yes, the plugin uses WooCommerce's standard styling and hooks, making it compati
 
 == Additional Information ==
 
-For more WordPress and WooCommerce plugins, visit [Wijnberg Developments](https://products.wijnberg.dev/product-category/wordpress/plugins/).
+This plugin is fully open source. You can find the source code on [GitHub](https://github.com/Paulsky/filter-order-history)
 
+For more WordPress and WooCommerce plugins, visit [Wijnberg Developments](https://products.wijnberg.dev/product-category/wordpress/plugins/).

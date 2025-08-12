@@ -327,11 +327,8 @@ class Wdevs_Filter_Order_History_Filter_Manager {
 				break;
 		}
 
-		// Fallback: try WordPress translation
-		$translated = __( $value, 'filter-order-history-for-woocommerce' );
-		
-		// If translation is the same as original, return original (no translation found)
-		return ( $translated !== $value ) ? $translated : $value;
+		// No translation found, return original value
+		return $value;
 	}
 
 	/**

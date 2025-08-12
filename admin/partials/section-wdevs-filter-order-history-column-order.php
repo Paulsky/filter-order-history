@@ -25,7 +25,7 @@ if ( ! defined( 'WPINC' ) ) {
 <table class="wc-shipping-zones widefat" cellspacing="0" id="wdevs-foh-column-order-table">
 	<thead>
 		<tr>
-            <th class="wc-shipping-zone-sort"><?php echo wc_help_tip( __( 'Drag and drop to re-order your custom zones. This is the order in which they will be matched against the customer address.', 'filter-order-history-for-woocommerce' ) ); ?></th>
+            <th class="wc-shipping-zone-sort"><?php echo wc_help_tip( esc_html__( 'Drag and drop to re-order your custom zones. This is the order in which they will be matched against the customer address.', 'filter-order-history-for-woocommerce' ) ); ?></th>
 			<th class="wc-shipping-zone-name"><?php esc_html_e( 'Column name', 'filter-order-history-for-woocommerce' ); ?></th>
 		</tr>
 	</thead>

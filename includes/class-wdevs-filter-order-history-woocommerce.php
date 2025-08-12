@@ -90,10 +90,10 @@ class Wdevs_Filter_Order_History_Woocommerce {
 		// Initialize filter manager
 		$this->filter_manager = new Wdevs_Filter_Order_History_Filter_Manager();
 
-		$this->current_section = isset( $_GET['section'] ) ? sanitize_text_field( $_GET['section'] ) : '';
+		$this->current_section = isset( $_GET['section'] ) ? sanitize_text_field( wp_unslash( $_GET['section'] ) ) : '';
 
-		$page = isset( $_GET['page'] ) ? sanitize_text_field( $_GET['page'] ) : '';
-		$tab  = isset( $_GET['tab'] ) ? sanitize_text_field( $_GET['tab'] ) : '';
+		$page = isset( $_GET['page'] ) ? sanitize_text_field( wp_unslash( $_GET['page'] ) ) : '';
+		$tab  = isset( $_GET['tab'] ) ? sanitize_text_field( wp_unslash( $_GET['tab'] ) ) : '';
 
 		if ( is_admin() && $page === 'wc-settings' && $tab === 'wdevs_foh') {
 			$this->handle_sections();
@@ -234,7 +234,7 @@ class Wdevs_Filter_Order_History_Woocommerce {
 			$class     = ( $this->current_section === $id ? 'current' : '' );
 			$separator = '|';
 			$text      = esc_html( $label );
-			echo "<li><a href='$url' class='$class'>$text</a> $separator </li>";
+			echo "<li><a href='" . esc_url( $url ) . "' class='" . esc_attr( $class ) . "'>" . esc_html( $text ) . "</a> " . esc_html( $separator ) . " </li>";
 		}
 
 		?>

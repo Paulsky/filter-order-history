@@ -61,8 +61,8 @@ class Wdevs_Filter_Order_History_Admin {
 	 */
 	public function enqueue_scripts() {
 
-		$page = isset( $_GET['page'] ) ? sanitize_text_field( $_GET['page'] ) : '';
-		$tab = isset( $_GET['tab'] ) ? sanitize_text_field( $_GET['tab'] ) : '';
+		$page = isset( $_GET['page'] ) ? sanitize_text_field( wp_unslash( $_GET['page'] ) ) : '';
+		$tab  = isset( $_GET['tab'] ) ? sanitize_text_field( wp_unslash( $_GET['tab'] ) ) : '';
 
 		if ( $page === 'wc-settings' && $tab === 'wdevs_foh' ) {
 			wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/wdevs-filter-order-history-admin.js', array('jquery', 'jquery-ui-sortable', 'jquery-blockui'), $this->version, false );

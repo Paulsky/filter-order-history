@@ -1,6 +1,6 @@
 === OrderFinder - Filter Order History for WooCommerce ===
 Contributors: wijnbergdevelopments
-Tags: woocommerce, orders, filter, history, customer, account, search, columns
+Tags: woocommerce, orders, filter, search, columns
 Requires at least: 6.0
 Tested up to: 6.8
 Stable tag: 1.0.0

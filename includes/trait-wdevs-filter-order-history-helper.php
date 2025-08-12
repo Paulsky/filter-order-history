@@ -32,44 +32,44 @@ trait Wdevs_Filter_Order_History_Helper_Trait {
 	 */
 	public function get_order_fields() {
 		$fields = array(
-			'status'   => __( 'Order Status', 'woocommerce' ),
-			'number'   => __( 'Order Number', 'woocommerce' ),
+			'status'   => __( 'Order Status', 'filter-order-history-for-woocommerce' ),
+			'number'   => __( 'Order Number', 'filter-order-history-for-woocommerce' ),
 
 			// Additional order fields
-			'currency' => __( 'Currency', 'woocommerce' ),
+			'currency' => __( 'Currency', 'filter-order-history-for-woocommerce' ),
 
-			'date_created'         => __( 'Date created', 'woocommerce' ),
-			'date_modified'        => __( 'Date modified', 'woocommerce' ),
-			'date_completed'       => __( 'Date completed', 'woocommerce' ),
-			'date_paid'            => __( 'Date paid', 'woocommerce' ),
+			'date_created'         => __( 'Date created', 'filter-order-history-for-woocommerce' ),
+			'date_modified'        => __( 'Date modified', 'filter-order-history-for-woocommerce' ),
+			'date_completed'       => __( 'Date completed', 'filter-order-history-for-woocommerce' ),
+			'date_paid'            => __( 'Date paid', 'filter-order-history-for-woocommerce' ),
 
 			// Billing address fields
-			'billing_first_name'   => __( 'Billing First Name', 'woocommerce' ),
-			'billing_last_name'    => __( 'Billing Last Name', 'woocommerce' ),
-			'billing_company'      => __( 'Billing Company', 'woocommerce' ),
-			'billing_address_1'    => __( 'Billing Address 1', 'woocommerce' ),
-			'billing_address_2'    => __( 'Billing Address 2', 'woocommerce' ),
-			'billing_city'         => __( 'Billing City', 'woocommerce' ),
-			'billing_state'        => __( 'Billing State', 'woocommerce' ),
-			'billing_postcode'     => __( 'Billing Postcode', 'woocommerce' ),
-			'billing_country'      => __( 'Billing Country', 'woocommerce' ),
-			'billing_email'        => __( 'Billing Email', 'woocommerce' ),
-			'billing_phone'        => __( 'Billing Phone', 'woocommerce' ),
+			'billing_first_name'   => __( 'Billing First Name', 'filter-order-history-for-woocommerce' ),
+			'billing_last_name'    => __( 'Billing Last Name', 'filter-order-history-for-woocommerce' ),
+			'billing_company'      => __( 'Billing Company', 'filter-order-history-for-woocommerce' ),
+			'billing_address_1'    => __( 'Billing Address 1', 'filter-order-history-for-woocommerce' ),
+			'billing_address_2'    => __( 'Billing Address 2', 'filter-order-history-for-woocommerce' ),
+			'billing_city'         => __( 'Billing City', 'filter-order-history-for-woocommerce' ),
+			'billing_state'        => __( 'Billing State', 'filter-order-history-for-woocommerce' ),
+			'billing_postcode'     => __( 'Billing Postcode', 'filter-order-history-for-woocommerce' ),
+			'billing_country'      => __( 'Billing Country', 'filter-order-history-for-woocommerce' ),
+			'billing_email'        => __( 'Billing Email', 'filter-order-history-for-woocommerce' ),
+			'billing_phone'        => __( 'Billing Phone', 'filter-order-history-for-woocommerce' ),
 
 			// Shipping address fields
-			'shipping_first_name'  => __( 'Shipping First Name', 'woocommerce' ),
-			'shipping_last_name'   => __( 'Shipping Last Name', 'woocommerce' ),
-			'shipping_company'     => __( 'Shipping Company', 'woocommerce' ),
-			'shipping_address_1'   => __( 'Shipping Address 1', 'woocommerce' ),
-			'shipping_address_2'   => __( 'Shipping Address 2', 'woocommerce' ),
-			'shipping_city'        => __( 'Shipping City', 'woocommerce' ),
-			'shipping_state'       => __( 'Shipping State', 'woocommerce' ),
-			'shipping_postcode'    => __( 'Shipping Postcode', 'woocommerce' ),
-			'shipping_country'     => __( 'Shipping Country', 'woocommerce' ),
-			'shipping_phone'       => __( 'Shipping Phone', 'woocommerce' ),
+			'shipping_first_name'  => __( 'Shipping First Name', 'filter-order-history-for-woocommerce' ),
+			'shipping_last_name'   => __( 'Shipping Last Name', 'filter-order-history-for-woocommerce' ),
+			'shipping_company'     => __( 'Shipping Company', 'filter-order-history-for-woocommerce' ),
+			'shipping_address_1'   => __( 'Shipping Address 1', 'filter-order-history-for-woocommerce' ),
+			'shipping_address_2'   => __( 'Shipping Address 2', 'filter-order-history-for-woocommerce' ),
+			'shipping_city'        => __( 'Shipping City', 'filter-order-history-for-woocommerce' ),
+			'shipping_state'       => __( 'Shipping State', 'filter-order-history-for-woocommerce' ),
+			'shipping_postcode'    => __( 'Shipping Postcode', 'filter-order-history-for-woocommerce' ),
+			'shipping_country'     => __( 'Shipping Country', 'filter-order-history-for-woocommerce' ),
+			'shipping_phone'       => __( 'Shipping Phone', 'filter-order-history-for-woocommerce' ),
 
 			// Payment fields
-			'payment_method_title' => __( 'Payment Method', 'woocommerce' ),
+			'payment_method_title' => __( 'Payment Method', 'filter-order-history-for-woocommerce' ),
 		);
 
 		return apply_filters( 'wdevs_foh_order_fields', $fields );

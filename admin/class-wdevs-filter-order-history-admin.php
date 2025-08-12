@@ -81,7 +81,7 @@ class Wdevs_Filter_Order_History_Admin {
 	 */
 	public function add_action_links( $actions ) {
 		$links = array(
-			'<a href="' . admin_url( 'admin.php?page=wc-settings&tab=wdevs_foh' ) . '">' . __( 'Settings' ) . '</a>', //Yes, just use WordPress text domain
+			'<a href="' . admin_url( 'admin.php?page=wc-settings&tab=wdevs_foh' ) . '">' . __( 'Settings', 'filter-order-history-for-woocommerce' ) . '</a>',
 		);
 
 		$actions = array_merge( $actions, $links );

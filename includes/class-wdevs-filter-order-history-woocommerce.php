@@ -462,7 +462,7 @@ class Wdevs_Filter_Order_History_Woocommerce {
 			wp_send_json_error( 'invalid_data' );
 			wp_die();
 		}
-        
+
 		if ( count( $column_order_data ) > 50 ) { // Prevent too large arrays
 			wp_send_json_error( 'too_many_items' );
 			wp_die();
@@ -527,7 +527,7 @@ class Wdevs_Filter_Order_History_Woocommerce {
 			return;
 		}
 
-		return $this->filter_manager->render_order_filters( $has_orders );
+		$this->filter_manager->render_order_filters( $has_orders );
 	}
 
 	/**
@@ -770,7 +770,7 @@ class Wdevs_Filter_Order_History_Woocommerce {
 		// Only close the wrapper if there are no orders but filtering is active
 		if ( ! $has_orders && $this->filter_manager->is_filtering() ) {
 			echo '</div>';
-			wc_print_notice( esc_html__( 'No results for the selected filters.', 'woocommerce' ), 'notice' ); // phpcs:ignore WooCommerce.Commenting.CommentHooks.MissingHookComment
+			wc_print_notice( esc_html__( 'No results for the selected filters.', 'filter-order-history-for-woocommerce' ), 'notice' ); // phpcs:ignore WooCommerce.Commenting.CommentHooks.MissingHookComment
 		}
 	}
 

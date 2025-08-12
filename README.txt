@@ -21,7 +21,6 @@ OrderFinder - Filter Order History for WooCommerce enhances your WooCommerce sto
 * Date range filtering with intuitive interface
 * Active filter display with clear removal options
 * Drag-and-drop admin interface for column management
-* HPOS (High-Performance Order Storage) compatibility
 
 For more information about this plugin, please visit the [plugin page](https://products.wijnberg.dev/).
 
@@ -31,7 +30,7 @@ For more information about this plugin, please visit the [plugin page](https://p
 
 === Filterable order fields ===
 
-The plugin supports filtering by comprehensive order information:
+The plugin supports filtering by different order fields:
 
 * **Order information** such as status, order number, currency, and key dates (created, modified, completed, paid)
 * **Billing information** such as customer name, company, contact details, and complete address information
@@ -78,10 +77,6 @@ After installation and configuration, customers will see enhanced functionality 
 
 Yes, the plugin uses WooCommerce's standard styling and hooks, making it compatible with most themes that properly support WooCommerce.
 
-= Does this work with HPOS (High-Performance Order Storage)? =
-
-Yes, OrderFinder is fully compatible with WooCommerce's High-Performance Order Storage feature.
-
 = Can I customize which fields customers can filter by? =
 
 Absolutely! Go to WooCommerce > Settings > Filter Order History to select which order fields should be available for filtering.
@@ -89,14 +84,6 @@ Absolutely! Go to WooCommerce > Settings > Filter Order History to select which 
 = Can I change the order of columns in the orders table? =
 
 Yes, use the drag-and-drop interface in WooCommerce > Settings > Filter Order History > Columns Ordering to reorder columns.
-
-= Does this work with large order volumes? =
-
-Yes, the plugin uses efficient WooCommerce query methods and supports pagination for performance.
-
-= Can customers see orders from other customers? =
-
-No, the plugin maintains WooCommerce's security model. Customers can only filter and view their own orders.
 
 == Screenshots ==
 

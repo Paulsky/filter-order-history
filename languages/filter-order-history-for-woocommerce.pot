@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: OrderFinder - Filter Order History for WooCommerce\n"
-"POT-Creation-Date: 2025-08-06 09:22+0200\n"
+"POT-Creation-Date: 2025-08-12 20:07+0200\n"
 "PO-Revision-Date: 2025-08-06 09:21+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -22,12 +22,12 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-1: node_modules\n"
 
 #: admin/class-wdevs-filter-order-history-admin.php:84
-#: includes/class-wdevs-filter-order-history-woocommerce.php:276
+#: includes/class-wdevs-filter-order-history-woocommerce.php:270
 msgid "Settings"
 msgstr ""
 
 #: admin/partials/section-wdevs-filter-order-history-column-order.php:22
-#: includes/class-wdevs-filter-order-history-woocommerce.php:277
+#: includes/class-wdevs-filter-order-history-woocommerce.php:271
 msgid "Columns ordering"
 msgstr ""
 
@@ -81,21 +81,21 @@ msgid ""
 "trusted WordPress & WooCommerce plugin partner from the Netherlands."
 msgstr ""
 
-#: includes/class-wdevs-filter-order-history-woocommerce.php:250
+#: includes/class-wdevs-filter-order-history-woocommerce.php:244
 msgid "Documentation"
 msgstr ""
 
-#: includes/class-wdevs-filter-order-history-woocommerce.php:484
+#: includes/class-wdevs-filter-order-history-woocommerce.php:491
 msgid "Column order updated."
 msgstr ""
 
 #. translators: %s: Field label
-#: includes/class-wdevs-filter-order-history-woocommerce.php:550
+#: includes/class-wdevs-filter-order-history-woocommerce.php:561
 #, php-format
 msgid "Search %s..."
 msgstr ""
 
-#: includes/class-wdevs-filter-order-history-woocommerce.php:750
+#: includes/class-wdevs-filter-order-history-woocommerce.php:773
 msgid "No results for the selected filters."
 msgstr ""
 
@@ -249,8 +249,8 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Filter and search your WooCommerce order history with customizable columns "
-"and advanced filtering options."
+"Let customers filter and search their order history with advanced options "
+"and customizable columns."
 msgstr ""
 
 #. Author of the plugin/theme

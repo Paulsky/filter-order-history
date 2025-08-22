@@ -99,7 +99,7 @@ class Wdevs_Filter_Order_History_Filter_Manager {
 		
 		foreach ( $_GET as $key => $value ) {
 			// Sanitize key immediately
-			$key = sanitize_key( $key );
+			$key = sanitize_key( wp_unslash($key) );
 			
 			// Skip our own filter parameters and nonce
 			if ( strpos( $key, 'wdevs_foh_filter_' ) === 0 || 

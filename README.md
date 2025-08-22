@@ -1,6 +1,6 @@
 # OrderFinder - Filter Order History for WooCommerce
 
-Enhances the WooCommerce order history page by adding advanced filtering capabilities and customizable column displays. This enables customers to easily search and filter their order history using multiple criteria while giving store owners full control over which information is displayed.
+Enhances the WooCommerce order history page by adding advanced filtering capabilities and customizable column displays. This enables customers to easily search and filter their order history using multiple criteria while giving store owners full control over which information is displayed. Works particularly well with plugins like [WooCommerce Address Book](https://wordpress.org/plugins/woo-address-book/).
 
 For more WordPress plugins, check out our products at [Wijnberg Developments](https://products.wijnberg.dev).
 

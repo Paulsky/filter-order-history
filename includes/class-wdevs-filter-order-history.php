@@ -70,7 +70,7 @@ class Wdevs_Filter_Order_History {
 		if ( defined( 'WDEVS_FILTER_ORDER_HISTORY_VERSION' ) ) {
 			$this->version = WDEVS_FILTER_ORDER_HISTORY_VERSION;
 		} else {
-			$this->version = '1.0.0';
+			$this->version = '1.0.1';
 		}
 		$this->plugin_name = 'wdevs-filter-order-history';
 

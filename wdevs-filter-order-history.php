@@ -16,7 +16,7 @@
  * Plugin Name:       OrderFinder - Filter Order History for WooCommerce
  * Plugin URI:        https://products.wijnberg.dev
  * Description:       Let customers filter and search their order history with advanced options and customizable columns.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Wijnberg Developments
  * Author URI:        https://products.wijnberg.dev/
  * License:           GPL-2.0+
@@ -24,10 +24,10 @@
  * Text Domain:       filter-order-history-for-woocommerce
  * Domain Path:       /languages
  * Requires at least:    6.0
- * Tested up to:         6.8
+ * Tested up to:         6.9
  * Requires PHP:         7.4
  * WC requires at least: 7.0.0
- * WC tested up to:      10.0.2
+ * WC tested up to:      10.3.6
  * Requires Plugins:     woocommerce
  */
 
@@ -41,7 +41,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'WDEVS_FILTER_ORDER_HISTORY_VERSION', '1.0.0' );
+define( 'WDEVS_FILTER_ORDER_HISTORY_VERSION', '1.0.1' );
 
 /**
  * The code that runs during plugin activation.

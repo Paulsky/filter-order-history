@@ -2,8 +2,8 @@
 Contributors: wijnbergdevelopments
 Tags: woocommerce, orders, filter, search, columns
 Requires at least: 6.0
-Tested up to: 6.8
-Stable tag: 1.0.0
+Tested up to: 6.9
+Stable tag: 1.0.1
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -22,7 +22,7 @@ OrderFinder - Filter Order History for WooCommerce enhances your WooCommerce sto
 * Active filter display with clear removal options
 * Drag-and-drop admin interface for column management
 
-For more information about this plugin, please visit the [plugin page](https://products.wijnberg.dev/).
+For more information about this plugin, please visit the [plugin page](https://products.wijnberg.dev/product/wordpress/plugins/filter-order-history/).
 
 === Requirements ===
 
@@ -59,15 +59,15 @@ Configure these plugin-specific settings:
 
 After installation and configuration, customers will see enhanced functionality on the **My Account > Orders** page:
 
-1. **Filtering Interface**: A filtering form appears above the orders table
-2. **Dropdown Filters**: Easy selection for categorical fields like status and payment method
-3. **Date Range Filters**: Date pickers for filtering by order dates
-4. **Active Filters**: Clear display of applied filters with removal options
-5. **Custom Columns**: Additional order information columns as configured by admin
+1. **Filtering interface**: A filtering form appears above the orders table
+2. **Dropdown filters**: Easy selection for categorical fields like status and payment method
+3. **Date range filters**: Date pickers for filtering by order dates
+4. **Active filters**: Clear display of applied filters with removal options
+5. **Custom columns**: Additional order information columns as configured by admin
 
 == Installation ==
 
-1. Upload the plugin files to the `/wp-content/plugins/wdevs-filter-order-history` directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the `/wp-content/plugins/filter-order-history-for-woocommerce` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress.
 3. Use the WooCommerce > Settings > Filter Order History screen to configure the plugin.
 
@@ -90,6 +90,10 @@ Yes, use the drag-and-drop interface in WooCommerce > Settings > Filter Order Hi
 1. Enhanced order history page with filtering interface and custom columns
 
 == Changelog ==
+
+= 1.0.1 =
+* Tested WordPress 6.9
+* Tested WooCommerce 10.3.6
 
 = 1.0.0 =
 * Initial release

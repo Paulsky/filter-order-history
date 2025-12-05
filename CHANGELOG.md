@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to the OrderFinder - Filter Order History for WooCommerce plugin will be documented in this file.
 
+## [1.0.1] - 2025-12-04
+### Updated
+- Tested WordPress 6.9
+- Tested WooCommerce 10.3.6
+
 ## [1.0.0] - 2025-08-22
 ### Added
 - Initial release of OrderFinder - Filter Order History for WooCommerce plugin
